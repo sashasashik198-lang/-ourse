@@ -97,12 +97,20 @@ export default function App() {
           ) : error ? (
             <div className="alert alert-danger">{error}</div>
           ) : (
-            <VehicleList
-              items={filtered}
-              onEdit={(it: Vehicle) => setEditing(it)}
-              onDelete={(id: string) => handleDelete(id)}
-              canManage={user?.role === 'admin' || user?.role === 'superadmin'}
-            />
+            <>
+              <VehicleList
+                items={filtered}
+                onEdit={(it: Vehicle) => setEditing(it)}
+                onDelete={(id: string) => handleDelete(id)}
+                canManage={user?.role === 'admin' || user?.role === 'superadmin'}
+              />
+              <VehicleList
+                items={filtered}
+                onEdit={(it: Vehicle) => setEditing(it)}
+                onDelete={(id: string) => handleDelete(id)}
+                canManage={user?.role === 'admin' || user?.role === 'superadmin'}
+              />
+            </>
           )}
         </div>
       </div>
