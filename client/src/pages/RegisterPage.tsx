@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { AppNavbar } from '../components/Navbar';
 import axios from 'axios';
 
-const http = axios.create({ baseURL: 'https://course-v-0-1-hw0z.onrender.com/api' });
+const http = axios.create({ baseURL: 'https://course-v-0-1-2.onrender.com/api' });
 
 export default function RegisterPage() {
   const [email, setEmail] = useState('');
