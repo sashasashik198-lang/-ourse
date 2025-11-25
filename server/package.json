@@ -5,10 +5,11 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-  "dev": "nodemon index.js",
-  "start": "node index.js",
-  "seed": "node ../scripts/seed-mongo.js",
-  "create-superadmin": "node ../scripts/create-superadmin.js"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "build": "echo 'No build needed'",
+    "seed": "node ../scripts/seed-mongo.js",
+    "create-superadmin": "node ../scripts/create-superadmin.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
