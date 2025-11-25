@@ -320,7 +320,9 @@ app.put('/api/requests/:id', async (req, res) => {
 app.delete('/api/requests/:id', async (req, res) => { try { await Request.deleteOne({id:req.params.id}); res.status(204).send(); }catch(e){res.status(500).json({message:e.message})}});
 
 // Auth: login / register
+console.log('Registering /api/auth/login route');
 app.post('/api/auth/login', async (req, res) => {
+  console.log('Login attempt:', req.body?.email);
   try {
     const { email, password } = req.body || {};
     if (!email || !password) return res.status(400).json({ message: 'Email and password required' });
